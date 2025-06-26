@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const server=  express();
 const PORT = 4444;
 const {v4:uuidv4 } = require('uuid');
@@ -46,4 +47,23 @@ res.redirect('/gettodos');
 
 server.listen(PORT , ()=>{
     console.log('http://localhost:' + PORT);
+=======
+const server = express();
+const path = require('path');
+const port = 8888;
+
+server.set('view engine' , 'hbs');
+//server.set('myhbsfoldername' , 'views');
+
+server.get('/' , (req,res)=>{
+    res.sendFile(path.join(__dirname , 'index.html'));
+})
+
+server.get('/learnhbs',(rew,res)=>{
+    res.render('index.hbs');
+})
+
+server.listen(port , ()=>{
+    console.log("server started at http://localhost:8888 ");
+>>>>>>> 89cbee2c45b76b12639f7497b42df3927c5012e0
 })
