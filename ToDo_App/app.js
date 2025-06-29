@@ -44,6 +44,19 @@ res.redirect('/gettodos');
 })
 
 
+server.post('/completetodo', (req, res) => {
+    const { id } = req.body;
+    todos = todos.map(task => {
+        if (task.id == id) {
+            return { ...task, completed: true };
+        }
+        return task;
+    });
+    res.redirect('/gettodos');
+});
+
+
+
 server.listen(PORT , ()=>{
     console.log('http://localhost:' + PORT);
 })
