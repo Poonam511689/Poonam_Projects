@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    text-align: center;
+    width: 500px;
+    margin :auto;
+    border: 1px solid black;
+    box-shadow: 10px 10px 20px black;
+
+
+}
+
+h2{
+    background-color: blueviolet;
+    color: white;
+    padding: 20px;
+}
+.input{
+    margin:10px 0px;
+}
+
+
+#inp1,
+#inp2,
+#btn{
+    padding: 5px;
+}
+
+.calculator {
+    margin: auto;
+    width: 300px; 
+}
